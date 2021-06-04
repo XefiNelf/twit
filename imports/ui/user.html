@@ -1,0 +1,37 @@
+<template name="User">
+  <button class="button is-rond is-outlined is-link home">Home</button>
+  <!-- Affiche le titre avec le nom d'utilisateur -->
+  <h2 id="user" class="title is-child"> {{user}}</h2>
+  <!-- Si l'utilisateur est connecté alors on affiche la zone de texte pour écrire notre texte-->
+  {{#if isUser}}
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img src="">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="field">
+          <p class="control"></p>
+            <form id="new-tweet">
+              <input id="form" class="textarea" type="text" name="tweet" placeholder="Type to add new tweet" />
+            </form>
+        </div>
+        <nav class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <a id="submit-tweet" class="button is-link submit">Submit</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </article>
+  {{/if}}
+
+
+  <ul>
+    {{#each tweets}}
+      {{> tweet}}
+    {{/each}}
+  </ul>
+</template>

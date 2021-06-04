@@ -1,0 +1,17 @@
+<template name="tweet">
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <img src="">
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="field">
+        <p class="control">
+          <button class="delete">&times;</button>
+          <span class="text"><strong><a href="" class="user">{{username}}</a></strong> - {{text}} - <i>{{createdAt}}</i></span>
+        </p>
+      </div>
+    </div>
+  </article>
+</template>

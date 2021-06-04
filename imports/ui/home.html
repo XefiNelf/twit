@@ -1,0 +1,10 @@
+<template name="home">
+  {{#if currentUser}}
+    <button class="tweet button is-rond is-link">Tweeter !</button>
+  {{/if}}
+  <ul>
+    {{#each tweets}}
+      {{> tweet}}
+    {{/each}}
+  </ul>
+</template>

@@ -1,0 +1,36 @@
+{
+  "name": "twitter",
+  "private": true,
+  "scripts": {
+    "css-build": "node-sass sass/my_styles.scss client/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "bcrypt": "^3.0.6",
+    "meteor-node-stubs": "^0.4.1",
+    "node-gyp": "^4.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "version": "1.0.0",
+  "main": "sass/my_styles.scss",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "bulma": "^0.7.5",
+    "node-sass": "^4.12.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
